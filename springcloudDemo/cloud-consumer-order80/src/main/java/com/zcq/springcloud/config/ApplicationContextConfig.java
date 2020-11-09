@@ -1,6 +1,5 @@
 package com.zcq.springcloud.config;
 
-import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
@@ -17,7 +16,7 @@ import org.springframework.web.client.RestTemplate;
 @Configuration
 public class ApplicationContextConfig {
     @Bean
-    @LoadBalanced//负载均衡 使用该注解赋予RestTemplate负载均衡的能力   默认轮询的负载机制 8001 8002 交替出现
+//    @LoadBalanced//负载均衡 使用该注解赋予RestTemplate负载均衡的能力   默认轮询的负载机制 8001 8002 交替出现
     public RestTemplate getRestTemplate(){
         return new RestTemplate();
     }
